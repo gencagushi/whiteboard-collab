@@ -1,0 +1,99 @@
+  <!doctype html>  
+<html lang="en">  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Realtime Whiteboard</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container-fluid" id="login-section">
+      <div class="row justify-content-center">
+        <div class="col-md-4 col-md-offset-4">
+          <h1>Whiteboard</h1>
+          <form id="chat_form">
+           <div class="form-group">
+            <label for="name">Name</label>
+            <input required id="name" type="text" class="form-control" placeholder="Enter your name..">
+          </div>
+
+          <div class="form-group">
+            <label for="roomId">Room ID</label>
+            <input required id ="roomId" type="text" class="form-control" placeholder="Enter room ID..">
+          </div>
+          
+          <button type="submit" class="btn btn-info">Enter Room</button>
+        </form>
+        <br/>
+        <div id="room-message-error" class="alert alert-warning alert-dismissible collapse" role="alert">
+          The requested room does not exist.
+          <button type="button" class="close" data-hide="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="room-section" style="display: none;">
+    <div class="tools-section">
+      <p class="room-id-text" id="whiteboard-room-id"> Room 1</p>
+      <div class="username-section tool-div">
+        <img class="user-icon" src="css/images/user-icon.png" alt="" />
+        <p id="username-text"></p>
+      </div>
+      <div class="all-clients-section">
+        <button type="button" id="connected-users" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-outline-secondary">Online Users</button>
+      </div>
+      <p class="room-id-text tools-text"> Tools</p>
+      <div class="colors">
+        <div class="color red"></div>
+        <div class="color orangered"></div>
+        <div class="color orange"></div>
+        <div class="color yellow"></div>
+        <div class="color yellowgreen"></div>
+        <div class="color green"></div>
+        <div class="color skyblue"></div>
+        <div class="color blue"></div>
+        <div class="color magenta"></div>
+        <div class="color blueviolet"></div>
+        <div class="color violet"></div>
+        <div class="color rosybrown"></div>
+        <div class="color brown"></div>
+        <div class="color gray"></div>
+        <div class="color black"></div>
+      </div>
+      <div class="eraser tool-div">
+        <img class="color white" src="css/images/eraser-icon.svg" alt="" />
+      </div>
+      <div class="leave-room tool-div">
+        <img class="exit-room-icon" id="exit-room" src="css/images/exit-icon.svg" alt="" />
+      </div>
+    </div>
+    <canvas class="whiteboard" style="border:1px solid" />
+  </div>
+
+  <!-- Modal to show the connected users-->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Connected Users in Room</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="modal-close-button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="connected-users-modal-body">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/jquery/dist/jquery.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>  
+</body>
+</html>  

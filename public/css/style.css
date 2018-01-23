@@ -1,0 +1,116 @@
+.container-fluid{
+	margin-top: 100px;
+}
+
+.whiteboard {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.colors {
+  border-bottom: solid 1px #cecece;
+  padding-bottom: 15px;
+  margin-right: 0px;
+  padding-top: 20px;
+  border-top: solid 1px #cecece;
+}
+
+.color {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+
+.color.red { background-color: red; }
+.color.orangered { background-color: orangered; }
+.color.orange { background-color: orange; }
+.color.yellow { background-color: yellow; }
+.color.yellowgreen{ background-color: yellowgreen; }
+.color.green { background-color: green; }
+.color.skyblue { background-color: skyblue; }
+.color.blue { background-color: blue; }
+.color.magenta { background-color: magenta; }
+.color.blueviolet { background-color: blueviolet; }
+.color.violet { background-color: violet; }
+.color.rosybrown { background-color: rosybrown; }
+.color.brown { background-color: brown; }
+.color.gray { background-color: gray; }
+.color.black { background-color: black; }
+
+.tools-section{
+	position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    height: 100%;
+    background-color: white;
+    width: 150px;
+    border-left: solid 1px black;
+    padding: 15px 15px;
+}
+
+.tools-section .room-id-text {
+	font-weight: bold;
+    font-size: 26px;
+    color: #585858;
+    text-align: center;
+}
+
+.tool-div {
+	text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #cecece;
+}
+.eraser img{
+	width:30px;
+	height:50px;
+}
+
+.leave-room img{
+	width:30px;
+	height:50px;
+	cursor: pointer;
+}
+
+.username-section{
+	border-bottom:none;
+	border-top:solid 1px #cecece;
+}
+
+.username-section p{
+	margin-bottom:0px;
+}
+
+.user-icon{
+	width: 40px;
+    height: 40px;
+}
+
+.online-user{
+	position:relative;
+}
+
+.online-user p{
+	padding-left:20px;
+}
+
+.online{
+	position: absolute;
+    background-color: green;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-top: 4px;
+}
+
+.tools-text{
+	font-size: 22px;
+    padding-top: 20px;
+}
+
